@@ -5,8 +5,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  var questionIndex = 0;
   void answerQuestion() {
-    print('Answer chosen');
+    questionIndex = questionIndex + 1;
+    print(questionIndex);
   }
 
   // This widget is the root of your application.
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
             ),
             body: Column(
               children: <Widget>[
-                Text('The question!'),
+                Text(questions[questionIndex]),
                 RaisedButton(
                   onPressed: answerQuestion,
                   child: Text('Answer 1'),
