@@ -5,6 +5,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  void answerQuestion() {
+    print('Answer chosen');
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -18,15 +22,15 @@ class MyApp extends StatelessWidget {
               children: <Widget>[
                 Text('The question!'),
                 RaisedButton(
-                  onPressed: null,
+                  onPressed: answerQuestion,
                   child: Text('Answer 1'),
                 ),
                 RaisedButton(
-                  onPressed: null,
+                  onPressed: answerQuestion,
                   child: Text('Answer 2'),
                 ),
                 RaisedButton(
-                  onPressed: null,
+                  onPressed: answerQuestion,
                   child: Text('Answer 3'),
                 )
               ],
