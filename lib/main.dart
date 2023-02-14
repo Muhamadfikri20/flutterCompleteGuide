@@ -10,14 +10,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var questionIndex = 0;
+  var _questionIndex = 0;
 
   void answerQuestion() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
 
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   // This widget is the root of your application.
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
             ),
             body: Column(
               children: <Widget>[
-                Text(questions[questionIndex]),
+                Text(questions[_questionIndex]),
                 RaisedButton(
                   onPressed: answerQuestion,
                   child: Text('Answer 1'),
