@@ -1,5 +1,5 @@
 class Person {
-  String? name;
+  String name;
   int age;
   Person({this.name, this.age = 30});
 }
