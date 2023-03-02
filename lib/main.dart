@@ -25,7 +25,20 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var questions = ['What\'s your favorite color?', 'What\'s your favorite animarl?'];
+    var questions = [
+      {
+        'questionText': 'What\'s your favorite color?',
+        'answer': ['Black', 'Red', 'Green', 'White']
+      },
+      {
+        'questionText': 'What\'s your favorite animal?',
+        'answer': ['Rabbit', 'Snake', 'Elephant', 'Lion']
+      },
+      {
+        'questionText': 'What\'s your favorite instructor?',
+        'answer': ['Max', 'Max', 'Max', 'Max']
+      },
+    ];
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
