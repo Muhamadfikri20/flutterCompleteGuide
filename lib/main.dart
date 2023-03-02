@@ -46,10 +46,10 @@ class _MyAppState extends State<MyApp> {
             ),
             body: Column(
               children: <Widget>[
-                Question(questions[_questionIndex]),
-                Answers(_answerQuestion),
-                Answers(_answerQuestion),
-                Answers(_answerQuestion),
+                Question(questions[_questionIndex]['questionText']),
+                ...(questions[_questionIndex]['answer'] as List<String>).map((answer) {
+                  return Answers(_answerQuestion, answer);
+                }).toList()
               ],
             )));
   }
