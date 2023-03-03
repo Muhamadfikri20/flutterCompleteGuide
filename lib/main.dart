@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './question.dart';
-import 'answer.dart';
+import 'package:flutter_complete_guide/quiz.dart';
+import 'package:flutter_complete_guide/result.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,14 +49,11 @@ class _MyAppState extends State<MyApp> {
               title: Text('My First App'),
             ),
             body: _questionIndex < questions.length
-                ? Column(
-                    children: <Widget>[
-                      Question(questions[_questionIndex]['questionText']),
-                      ...(questions[_questionIndex]['answer'] as List<String>).map((answer) {
-                        return Answers(_answerQuestion, answer);
-                      }).toList()
-                    ],
+                ? Quiz(
+                    answerQuestion: _answerQuestion,
+                    questionIndex: _questionIndex,
+                    questions: questions,
                   )
-                : Center(child: Text('You did it!'))));
+                : Result()));
   }
 }
